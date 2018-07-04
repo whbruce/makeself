@@ -289,7 +289,7 @@ do
 	shift
 	;;
     --tar-extra)
-	TAR_EXTRA="$2"
+	TAR_EXTRA="$TAR_EXTRA $2"
         if ! shift 2; then MS_Help; exit 1; fi
         ;;
     --untar-extra)
@@ -377,6 +377,11 @@ do
     EXPORT_CONF=y
     shift
     ;;
+    --exclude)
+	TAR_EXTRA="$TAR_EXTRA --exclude=$2"
+	DU_ARGS="$DU_ARGS --exclude=$2"
+        shift 2
+        ;;
     -q | --quiet)
 	QUIET=y
 	shift
