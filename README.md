@@ -145,9 +145,9 @@ Any subsequent arguments to the archive will be passed as additional arguments t
 
 ## Startup Script
 
-The startup script must be a regular Shell script. 
+The startup script must be a regular Shell script.
 
-Within the startup script, you can use the `$USER_PWD` variable to get the path of the folder from which the self-extracting script is executed. This is especially useful to access files that are located in the same folder as the script, as shown in the example below. 
+Within the startup script, you can use the `$USER_PWD` variable to get the path of the folder from which the self-extracting script is executed. This is especially useful to access files that are located in the same folder as the script, as shown in the example below.
 
 `my-self-extracting-script.sh --fooBarFileParameter foo.bar`
 

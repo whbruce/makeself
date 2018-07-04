@@ -20,13 +20,13 @@
 #         support for non-temporary archives. Ideas thanks to Francois Petitjean
 # - 1.3 : More patches from Bjarni R. Einarsson and Francois Petitjean:
 #         Support for no compression (--nocomp), script is no longer mandatory,
-#         automatic launch in an xterm, optional verbose output, and -target 
+#         automatic launch in an xterm, optional verbose output, and -target
 #         archive option to indicate where to extract the files.
 # - 1.4 : Improved UNIX compatibility (Francois Petitjean)
 #         Automatic integrity checking, support of LSM files (Francois Petitjean)
 # - 1.5 : Many bugfixes. Optionally disable xterm spawning.
 # - 1.5.1 : More bugfixes, added archive options -list and -check.
-# - 1.5.2 : Cosmetic changes to inform the user of what's going on with big 
+# - 1.5.2 : Cosmetic changes to inform the user of what's going on with big
 #           archives (Quake III demo)
 # - 1.5.3 : Check for validity of the DISPLAY variable before launching an xterm.
 #           More verbosity in xterms and check for embedded command's return value.
@@ -463,7 +463,7 @@ gzip)
     GZIP_CMD="gzip -c$COMPRESS_LEVEL"
     GUNZIP_CMD="gzip -cd"
     ;;
-pigz) 
+pigz)
     GZIP_CMD="pigz -$COMPRESS_LEVEL"
     GUNZIP_CMD="gzip -cd"
     ;;
@@ -502,7 +502,7 @@ gpg-asymmetric)
 openssl)
     GZIP_CMD="openssl aes-256-cbc -a -salt"
     GUNZIP_CMD="openssl aes-256-cbc -d -a"
-    
+
     if test x"$OPENSSL_NO_MD" != xy; then
         GZIP_CMD="$GZIP_CMD -md sha256"
         GUNZIP_CMD="$GUNZIP_CMD -md sha256"
@@ -510,7 +510,7 @@ openssl)
 
     if test -n "$PASSWD_SRC"; then
         GZIP_CMD="$GZIP_CMD -pass $PASSWD_SRC"
-    elif test -n "$PASSWD"; then 
+    elif test -n "$PASSWD"; then
         GZIP_CMD="$GZIP_CMD -pass pass:$PASSWD"
     fi
     ;;
@@ -546,7 +546,7 @@ else
     exit 1
 fi
 
-if test "$QUIET" = "n";then 
+if test "$QUIET" = "n";then
     echo
 fi
 

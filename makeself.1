@@ -2,18 +2,18 @@
 .SH "NAME"
 makeself \- An utility to generate self-extractable archives.
 .SH "SYNTAX"
-.LP 
-.B makeself [\fIoptions\fP] archive_dir file_name label 
+.LP
+.B makeself [\fIoptions\fP] archive_dir file_name label
 .B [\fIstartup_script\fP] [\fIargs\fP]
 .SH "DESCRIPTION"
-.LP 
-This program is a free (GPL) utility designed to create self-extractable 
-archives from a directory. 
+.LP
+This program is a free (GPL) utility designed to create self-extractable
+archives from a directory.
 .br
 .SH "OPTIONS"
-.LP 
+.LP
 The following options are supported.
-.LP 
+.LP
 .TP 15
 .B -v, --version
 Prints out the makeself version number and exits.
@@ -55,7 +55,7 @@ Do not compress the data.
 Specify the compression level for gzip,bzip2,pbzui2,xz,lzo or lz4
 .TP
 .B --notemp
-The archive will create archive_dir in the current directory and 
+The archive will create archive_dir in the current directory and
 uncompress in ./archive_dir.
 .TP
 .B --copy
@@ -71,7 +71,7 @@ Files will be extracted to the current directory. Both --current and --target di
 Extract directly to a target directory. Directory path can be either absolute or relative.
 .TP
 .B --header file
-Specify location of the header script. 
+Specify location of the header script.
 .TP
 .B --follow
 Follow the symlinks in the archive.
@@ -97,8 +97,8 @@ LSM file describing the package.
 Use provided string as the packaging date instead of the current date.
 .PD
 .SH "AUTHORS"
-.LP 
-Makeself has been written by Stéphane Peter <megastep@megastep.org>.
-.BR 
-This man page was originally written by Bartosz Fenski <fenio@o2.pl> for the 
+.LP
+Makeself has been written by Stï¿½phane Peter <megastep@megastep.org>.
+.BR
+This man page was originally written by Bartosz Fenski <fenio@o2.pl> for the
 Debian GNU/Linux distribution (but it may be used by others).
